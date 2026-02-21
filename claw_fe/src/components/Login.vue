@@ -41,8 +41,8 @@ export default {
   methods: {
     async handleLogin() {
       try {
-        // 调用后端验证API (假设路径为 /api/auth/login)
-        const response = await axios.post('http://101.200.153.89:8090/api/auth/login', {
+        // 调用后端验证API (使用内网IP)
+        const response = await axios.post('http://172.24.43.231:8090/api/auth/login', {
           username: this.username,
           password: this.password
         });
